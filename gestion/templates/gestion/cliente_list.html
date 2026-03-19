@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Lista de Clientes {% endblock %}
+
+{% block content %}
+ <h1>Lista de Clientes</h1>
+    <a href="{% url 'cliente-create' %}">Nuevo Cliente</a>
+    <ul>
+        {% for cliente in object_list %}
+            <li>
+                {{ cliente.nombre }} - {{ cliente.email }}
+                <a href="{% url 'cliente-update' cliente.pk %}">Editar</a>
+                <a href="{% url 'cliente-delete' cliente.pk %}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
