@@ -78,6 +78,19 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+
+    # Configuración para PostgreSQL en producción
+    # Para usar PostgreSQL, instalar psycopg2 con: pip install psycopg2
+    # Luego reemplazar el bloque 'default' de arriba por este:
+    #
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'nombre_base_de_datos',
+    #     'USER': 'usuario',
+    #     'PASSWORD': 'contraseña',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # }
 }
 
 
