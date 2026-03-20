@@ -135,3 +135,4 @@ LOGIN_REDIRECT_URL = '/clientes/' #Esto es basicamente para que despues
 #del logeo se vaya para clientes
 LOGIN_URL = '/accounts/login/'#Y esta otra es para que si alguien entra
 #sin estar logueado lo envie a loguearsee
+LOGOUT_REDIRECT_URL = '/accounts/login/'
